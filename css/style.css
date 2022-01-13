@@ -15,20 +15,23 @@ main {
   margin: 2rem;
 }
 
-.sedans, .suvs, .luxury {
-  height: 30vh;
+.sedans {
   background-color: #e38826;
-  padding: 2rem 5rem 2rem 3rem;
   border-radius: .5rem  .5rem 0 0;
+  padding: 2rem 3rem 2rem 3rem;
 }
 
-.sedans h1, .suvs h1, .luxury h1 {
+.sedans svg, .sedans p {
+  margin-bottom: 2rem;
+}
+
+.sedans h1 {
   font-family: "Big Shoulders Display", cursive;
   color: #f2f2f2;
   text-transform: uppercase;
 }
 
-.sedans p, .suvs p, .luxury p {
+.sedans p {
   font-family: "Lexend Deca", sans-serif;
   color: rgba(255, 255, 255, 0.75);
   font-size: 12px;
@@ -36,29 +39,118 @@ main {
   line-height: 20px;
 }
 
-.sedans button, .suvs button, .luxury button {
-  margin-top: 2rem;
-  width: 60%;
+.sedans button {
+  width: 65%;
   border: white 1px solid;
-  color: white;
-  background-color: #e38826;
   border-radius: 5rem;
-  padding: .5rem;
+  padding: .8rem;
 }
 
-.sedans button:hover, .suvs button:hover, .luxury button:hover {
+.sedans button {
   color: #e38826;
   background-color: white;
-  cursor: pointer;
 }
 
 .suvs {
+  padding: 2rem 3rem 2rem 3rem;
   background-color: #006970;
   border-radius: 0;
 }
 
+.suvs svg, .suvs p {
+  margin-bottom: 2rem;
+}
+
+.suvs h1 {
+  font-family: "Big Shoulders Display", cursive;
+  color: #f2f2f2;
+  text-transform: uppercase;
+}
+
+.suvs p {
+  font-family: "Lexend Deca", sans-serif;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 12px;
+  margin-top: 1rem;
+  line-height: 20px;
+}
+
+.suvs button {
+  width: 65%;
+  border: white 1px solid;
+  border-radius: 5rem;
+  padding: .8rem;
+}
+
+.suvs button {
+  color: #006970;
+  background-color: white;
+}
+
 .luxury {
+  padding: 2rem 3rem 2rem 3rem;
   background-color: #004241;
   border-radius: 0 0 .5rem  .5rem;
+}
+
+.luxury svg, .luxury p {
+  margin-bottom: 2rem;
+}
+
+.luxury h1 {
+  font-family: "Big Shoulders Display", cursive;
+  color: #f2f2f2;
+  text-transform: uppercase;
+}
+
+.luxury p {
+  font-family: "Lexend Deca", sans-serif;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 12px;
+  margin-top: 1rem;
+  line-height: 20px;
+}
+
+.luxury button {
+  width: 65%;
+  border: white 1px solid;
+  border-radius: 5rem;
+  padding: .8rem;
+}
+
+.luxury button {
+  color: #004241;
+  background-color: white;
+}
+
+@media (min-width: 1040px) {
+  main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 5rem 15rem;
+  }
+  .sedans svg, .sedans p,
+  .suvs svg,
+  .suvs p,
+  .luxury svg,
+  .luxury p {
+    margin-top: 1rem;
+  }
+  .sedans button,
+  .suvs button,
+  .luxury button {
+    margin-top: 3rem;
+    width: 60%;
+  }
+  .sedans {
+    border-radius: .5rem 0 0 0.5rem;
+  }
+  .luxury {
+    border-radius: 0 0.5rem 0.5rem 0;
+  }
 }
 /*# sourceMappingURL=style.css.map */
