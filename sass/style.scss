@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Comforter+Brush&display=swap');
+
+// VARIABLES -------------------------------
+
+$bright-orange: hsl(31, 77%, 52%);
+$dark-cyan: hsl(184, 100%, 22%);
+$very-dark-cyan: hsl(179, 100%, 13%);
+$transparent-white: hsla(0, 0%, 100%, 0.75);
+$very-light-gray: hsl(0, 0%, 95%);
+
+// FONTS --------------------------------------
+$primary-font:'Lexend Deca', sans-serif;
+$secondary-font:'Big Shoulders Display', cursive;
+
+//MIXINS --------------------------------------
+
+*{
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+body{
+    background-color: rgb(238, 235, 235);
+    
+}
+main{
+margin: 2rem;
+}
+
+.sedans{
+    height: 30vh;
+    background-color: $bright-orange;
+    padding: 2rem 5rem 2rem 3rem;
+    border-radius: .5rem  .5rem 0 0; 
+
+    
+h1{
+    font-family: $secondary-font;
+    color: $very-light-gray;
+    text-transform: uppercase;
+    
+ }
+ 
+ p{
+     font-family: $primary-font;
+     color: $transparent-white;
+     font-size: 12px;
+     margin-top: 1rem;
+     line-height: 20px;
+    
+ }
+ 
+ button{
+    margin-top: 2rem;
+     width: 60%;
+     border: white 1px solid;
+     color: white;
+     background-color: $bright-orange;
+     border-radius: 5rem;
+     padding:.5rem;
+
+ }
+ 
+ button:hover{
+     color: $bright-orange;
+     background-color: white;
+     cursor: pointer;
+ }
+ 
+}
+
+.suvs{
+    @extend .sedans;
+    background-color: $dark-cyan;
+    border-radius: 0; 
+}
+
+.luxury{
+    @extend .sedans;
+    background-color: $very-dark-cyan;
+    border-radius: 0 0 .5rem  .5rem; 
+}
