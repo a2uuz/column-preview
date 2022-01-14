@@ -1,0 +1,48 @@
+// MAIN-PAGE--STYLE ----------------------------------------------------------
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(238, 235, 235);
+}
+main {
+  margin: 2rem;
+  padding: 1rem;
+}
+
+.sedans {
+  background-color: $bright-orange;
+  border-radius: 0.5rem 0.5rem 0 0;
+  @include main-elements-style();
+
+  button {
+    color: $bright-orange;
+    background-color: $very-light-gray;
+  }
+}
+
+.suvs {
+  @include main-elements-style();
+  background-color: $dark-cyan;
+  border-radius: 0;
+
+  button {
+    color: $dark-cyan;
+    background-color: $very-light-gray;
+  }
+}
+
+.luxury {
+  @include main-elements-style();
+  background-color: $very-dark-cyan;
+  border-radius: 0 0 0.5rem 0.5rem;
+
+  button {
+    color: $very-dark-cyan;
+    background-color: $very-light-gray;
+  }
+}

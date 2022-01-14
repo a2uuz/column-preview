@@ -1,135 +1,66 @@
-@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Comforter+Brush&display=swap');
+// Partials
+@import "./normalize", "./variables", "./mixins", "./base";
 
-// VARIABLES -------------------------------
+// Google fonts Imports
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Comforter+Brush&display=swap");
 
-$bright-orange: hsl(31, 77%, 52%);
-$dark-cyan: hsl(184, 100%, 22%);
-$very-dark-cyan: hsl(179, 100%, 13%);
-$transparent-white: hsla(0, 0%, 100%, 0.75);
-$very-light-gray: hsl(0, 0%, 95%);
-
-// FONTS --------------------------------------
-$primary-font:'Lexend Deca', sans-serif;
-$secondary-font:'Big Shoulders Display', cursive;
-
-//MIXINS --------------------------------------
-@mixin main-elements-style {
-    padding: 2rem 3rem 2rem 3rem;
-    
-svg, p{
-    margin-bottom: 2rem;
-}
-h1{
-    font-family: $secondary-font;
-    color: $very-light-gray;
-    text-transform: uppercase;
-    
- }
- 
- p{
-     font-family: $primary-font;
-     color: $transparent-white;
-     font-size: 12px;
-     margin-top: 1rem;
-     line-height: 20px;
-    
- }
- 
- button{
-     width: 65%;
-     border: white 1px solid;
-    //  color: white;
-    //  background-color: $bright-orange;
-     border-radius: 5rem;
-     padding:.8rem;
-    
- }
- @content
-}
-
-
-*{
-box-sizing: border-box;
-margin: 0;
-padding: 0;
-}
-
-body{
-    background-color: rgb(238, 235, 235);
-    
-}
-main{
-margin:2rem;
-
-}
-
-.sedans{
-    background-color: $bright-orange;
-    border-radius: .5rem  .5rem 0 0; 
-    @include main-elements-style();
-    
-
-    button{
-        color: $bright-orange;
-     background-color: white;
-    }
-//  button:hover{
-//      color: $bright-orange;
-//      background-color: white;
-//      cursor: pointer;
-//  }
- 
-}
-
-.suvs{
-    @include main-elements-style();
-    background-color: $dark-cyan;
-    border-radius: 0; 
-
-    button{
-        color: $dark-cyan;
-     background-color: white;
-    }
-
-}
-
-.luxury{
-    @include main-elements-style();
-    background-color: $very-dark-cyan;
-    border-radius: 0 0 .5rem  .5rem;
-
-    button{
-        color: $very-dark-cyan;
-     background-color: white;
-    }
-}
-
-
-@media (min-width:1040px){
-main{
-    
+//  MEDIA QUERIES ---------------------------------------------------------
+@media (min-width: 1040px) {
+  main {
     display: flex;
     justify-content: center;
     margin: 5rem 15rem;
-
-
-}
-.sedans,
-.suvs,
-.luxury{
-    svg, p{
-        margin-top: 1rem;
+    padding: 1.5rem;
+  }
+  .sedans,
+  .suvs,
+  .luxury {
+    svg,
+    p {
+      margin-top: 1rem;
     }
-    button{
-        margin-top: 3rem;
-        width: 60%;
+    button {
+      margin-top: 3rem;
+      width: 60%;
     }
-}
-.sedans{
-    border-radius: .5rem 0 0 0.5rem;
-}
-.luxury{
+  }
+
+  .sedans {
+    border-radius: 0.5rem 0 0 0.5rem;
+    button {
+      color: $very-light-gray;
+      background-color: $bright-orange;
+    }
+    button:hover {
+      color: $bright-orange;
+      background-color: $very-light-gray;
+      cursor: pointer;
+    }
+  }
+
+  .suvs {
+    button {
+      color: $very-light-gray;
+      background-color: $dark-cyan;
+    }
+    button:hover {
+      color: $dark-cyan;
+      background-color: $very-light-gray;
+      cursor: pointer;
+    }
+  }
+  .luxury {
     border-radius: 0 0.5rem 0.5rem 0;
-}
+
+    button {
+      color: $very-light-gray;
+      background-color: $very-dark-cyan;
+    }
+    button:hover {
+      color: $very-dark-cyan;
+      background-color: $very-light-gray;
+      cursor: pointer;
+    }
+  }
 }

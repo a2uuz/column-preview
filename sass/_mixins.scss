@@ -1,0 +1,32 @@
+//MIXINS ------------------------------------------------------------------------------------------------------
+@mixin main-elements-style {
+  padding: 2rem 3rem 2rem 3rem;
+
+  svg,
+  p {
+    margin-bottom: 2rem;
+  }
+  h1 {
+    font-family: $secondary-font;
+    color: $very-light-gray;
+    text-transform: uppercase;
+  }
+
+  p {
+    font-family: $primary-font;
+    color: $transparent-white;
+    font-size: 12px;
+    margin-top: 1rem;
+    line-height: 20px;
+  }
+
+  button {
+    width: 65%;
+    border: $very-light-gray 1px solid;
+    //  color:$very-light-gray;
+    //  background-color: $bright-orange;
+    border-radius: 5rem;
+    padding: 0.8rem;
+  }
+  @content;
+}
